@@ -6,6 +6,8 @@ const uid2 = require("uid2");
 // Call models
 const User = require("../models/User");
 
+//test commit
+
 router.post("/user/sign_up", (req, res) => {
   if (!req.body.email) {
     return res.status(400).json({ message: " l'email est manquant" });

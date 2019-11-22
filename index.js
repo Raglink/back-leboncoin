@@ -14,10 +14,12 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Call models
 require("./models/User");
 // Call routes
-const userRoutes = require("./routes/user");
+const signUpRoutes = require("./routes/signUp");
+const logInRoutes = require("./routes/logIn");
 
 // Active routes
-app.use(userRoutes);
+app.use(signUpRoutes);
+app.use(logInRoutes);
 
 app.listen(4000, () => {
   console.log("Server started");
